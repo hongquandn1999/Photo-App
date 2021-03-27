@@ -1,13 +1,20 @@
 import React from 'react';
+import Banner from '../../../../components/Banner'
+import PhotoForm from '../../components/PhotoForm'
 import PropTypes from 'prop-types';
+import './styles.scss'
 
 AddEditPage.propTypes = {};
 
 function AddEditPage(props) {
 	return (
-		<div>
-			<p>Trang Edit Page</p>
+		<div className='photo-edit'>
+			<Banner title='Pick your photo of TTL 🙎🙎🙎 '/>
+			<div className='photo-edit'>
+				<PhotoForm onSubmit={values => console.log('Form submit: ', values)} />
+			</div>
 		</div>
+		
 	);
 }
 
