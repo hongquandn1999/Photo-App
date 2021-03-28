@@ -9,7 +9,7 @@ function Header(props) {
 				<Row className='justify-content-between'>
 					<Col xs='auto'>
 						<a
-							href='https://www.instagram.com/sunhuyn/'
+							href='https://www.instagram.com/quytra.93/'
 							className='header__link header__title'
 							target='_blank'
 							rel='noopener noreferrer'>
