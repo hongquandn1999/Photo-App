@@ -5,19 +5,19 @@
 1. Add SCSS Support
 
 ```
-    npm i --save-dev node-sass
+    yarn add node-sass
 ```
 
 2. Add react router
 
 ```
-    npm i --save react-router-dom
+    yarn add react-router-dom
 ```
 
 3. Add UI lib
 
 ```
-    npm i --save reactstrap
+    yarn add reactstrap
 ```
 
 ## Structure Folder
@@ -45,3 +45,45 @@
 ## Organize Routing 
 - Use lazy load components
 - Load from each features
+
+## Formik 
+- Manage Form 
+```
+    yarn add formik
+```
+### Custom field in formik
+- Cầu nối giữa UI control và Formik
+- UI Control là một controlled component với props
+    + name: tên xác định của control
+    + value: giá trị của control 
+    + onChange: trigger hàm này với giá trị mới khi có thay đổi
+    + onBlur: xác định khi nào thì control này bị touched
+```js
+    function InputField(props) {
+        const {
+            field,
+            type, label, placeholder, disabled,
+        } = props;
+        const { name } = field;
+        return (
+            <FormGroup>
+            {label && <Label for={name}>{label}</Label>}
+            <Input
+                id={name}
+                {...field}
+                type={type}
+                disabled={disabled}
+                placeholder={placeholder}
+            />
+            </FormGroup>
+        );
+    }
+```
+### Random photo control
+- Random photo
+- Props: 
+    + name
+    + imgUrl
+    + onImgUrlChange
+    + onRandomButtonBlur
+    
